@@ -1,0 +1,191 @@
+@import "../../../global-styles/style.scss";
+
+$primary-pink: #CA59FF;
+$primary-blue: #6C7CFF;
+$primary-sky: #2AFFFF;
+$primary-yellow: #FFF629;
+$secondary-white: #ffffff;
+$secondary-grey: #272D42;
+
+
+.homepage{
+   max-width: 1440px;
+   padding: 159px 152px 140px;
+   margin: auto;
+
+   & &__container{
+      max-width: 1136px;
+      margin: auto;
+      display: flex;
+      gap: 16px;
+      justify-content: space-between;
+   }
+
+   & &__box{
+      
+      &--left{
+         flex: 0 1 41.1091%;  
+      }
+
+      &--right{
+         flex: 0 1 49.29577%                 ;
+         display: grid;
+         grid-template-columns:repeat( auto-fit, minmax(210px, 1fr) );
+         grid-template-rows: 1fr;
+         grid-column-gap: 24px;
+         grid-row-gap: 31px;
+      }
+   }
+
+   & &__title{
+      font-weight: 500;
+      font-size: 48px;
+      font-size: var(--fonts-header1);
+      line-height: var(--line-heigh-header1);
+      letter-spacing: -0.002em;
+      margin-bottom: 24px;
+   }
+
+   & &__text{
+      font-weight: 400;
+      font-size: var(--fonts-body1);
+      line-height: 24px;     
+      color: #FFFFFF;
+   }
+}
+
+
+// .......................................CARD............................................
+
+.card{
+   flex: 0 1 268px;
+   padding: 24px 16px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 16px;
+   text-align: center;
+   background-color: rgba( $secondary-grey, .75);
+   border-radius: var(--cart-rounding);
+
+  & &__box-image{
+      width: 64px;
+      height: 64px;
+      border-radius: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &--pink{
+         background-color: rgba($primary-pink,0.1);
+      }
+      &--blue{
+         background-color: rgba($primary-blue,0.1);
+      }
+      &--sky{
+         background-color: rgba($primary-sky,0.1);
+      }
+      &--yellow{
+         background-color: rgba($primary-yellow,0.1);
+      }
+   }
+
+   & &__img{
+      width: 32px;
+      height: 32px;
+   }
+
+   & &__title{
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 24px;
+   }
+
+   & &__text{
+      font-style: normal;
+      font-weight: 400;
+      font-size: var(--fonts-body2);
+      line-height: var(--line-heigh-body2);
+      text-align: center;
+      color: rgba($secondary-white, .5);
+      opacity: 0.5;
+   }
+}
+
+// ...........................................MEADIA QUERY..............................................
+
+@media only screen and (max-width:1440px){
+   .homepage{
+      padding: 159px 24px 140px;
+
+      & &__box--left{
+            flex: 0 1 45%;
+         }
+   
+      & &__box--right{
+            flex: 0 1 60%; 
+            grid-column-gap: 16px;
+            grid-row-gap: 16px;
+         }
+   }
+}
+
+// ...........................................Tablet..............................................
+
+@media only screen and (max-width:834px){
+   .homepage{
+         padding: 247px 169px;
+      
+      & &__container{
+         max-width: 496px;
+         flex-direction: column;
+         gap: 24px;
+      }
+
+      & &__box--left{
+         flex: 0 1 100%;
+      }
+      
+      & &__box--right{
+         flex: 0 1 100%;
+         grid-template-columns:repeat( auto-fit, minmax(190px, 1fr) );
+      }
+
+      & &__title{
+         margin-bottom: 16px;
+      }
+   }
+
+   .card{
+      padding: 20px 17px 20px 14px;
+
+      & &__box-image{
+         width: 54px;
+         height: 54px;
+         border-radius: 14px;
+      }
+
+      & &__img{
+         width: 28px;
+         height: 28px;
+      }
+   }
+}
+
+// ...........................................Mobile..............................................
+
+@media only screen and (min-width:375px) and (max-width:834px){
+  .homepage{
+      padding: 247px 16px;
+   }
+}
+
+@media only screen and (max-width:375px){
+   .homepage{
+      padding: 48px 16px 64px;}
+
+   .card{
+      padding: 21px 20px;
+   }
+}

@@ -1,0 +1,45 @@
+/// Root Styles file
+/// Here we define all the root variables we need for our project.
+/// For examples see Material Design color system: https://m2.material.io/design/color/the-color-system.html
+:root{
+   --primary-dark-blue: #0F162D;  
+   --secondary-white: #ffffff;
+   --secondary-grey: #272D42;
+   --secondary-black:#000000;
+   
+   //........Fonts..............
+   --fonts-header1: 48px;
+   --fonts-header3:20px;
+   --line-heigh-header1: 56px;
+   --line-heigh-header3: 20px;
+   --line-heigh-body2: 24px;
+   --fonts-body1: 16px;
+   --fonts-body2: 16px;
+
+   @media (max-width:834px) {
+      --fonts-body2: 14px;
+      --line-heigh-header3: 20px;
+      --line-heigh-body2: 22px;
+   }
+
+   @media (max-width:375px) {
+      --fonts-header1: 32px;
+      --fonts-header3:20px;
+      --line-heigh-header1: 40px;
+      --line-heigh-header3: 20px;
+   }
+   
+
+   // ......Cart................
+   --cart-rounding: 24px;
+
+   @media (max-width:834px) {
+      --cart-rounding: 20px; 
+   }
+   
+}
+
+
+
+
+
